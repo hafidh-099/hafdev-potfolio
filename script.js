@@ -21,6 +21,25 @@ themeToggle.addEventListener("click", () => {
 });
 
 // ============================================================================
+// MOBILE MENU TOGGLE
+// ============================================================================
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+// Close menu when clicking a link
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
+
+// ============================================================================
 // SMOOTH SCROLL NAVIGATION
 // ============================================================================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -68,20 +87,23 @@ if (heroSection) {
 // ============================================================================
 const animateOnScroll = () => {
   const elements = document.querySelectorAll(
-    ".skill-card, .project-card, .about-stats, .contact-item"
+    ".skill-card, .project-card, .about-stats, .contact-item",
   );
 
-  const elementObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = "fadeInUp 0.8s ease forwards";
-        elementObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  });
+  const elementObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "fadeInUp 0.8s ease forwards";
+          elementObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    },
+  );
 
   elements.forEach((el) => {
     el.style.opacity = "0";
@@ -120,21 +142,24 @@ const startCounterAnimation = () => {
 
   if (!statsSection) return;
 
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        stats.forEach((stat) => {
-          if (!stat.hasAttribute("data-animated")) {
-            animateCounter(stat);
-            stat.setAttribute("data-animated", "true");
-          }
-        });
-        statsObserver.unobserve(statsSection);
-      }
-    });
-  }, {
-    threshold: 0.5,
-  });
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          stats.forEach((stat) => {
+            if (!stat.hasAttribute("data-animated")) {
+              animateCounter(stat);
+              stat.setAttribute("data-animated", "true");
+            }
+          });
+          statsObserver.unobserve(statsSection);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    },
+  );
 
   statsObserver.observe(statsSection);
 };
@@ -206,7 +231,7 @@ const updateActiveNav = () => {
     },
     {
       threshold: 0.5,
-    }
+    },
   );
 
   sections.forEach((section) => observer.observe(section));
@@ -347,9 +372,9 @@ const createMobileMenu = () => {
 // ============================================================================
 console.log(
   "%cWelcome to Hafidh's Portfolio! 🚀",
-  "color: #22d3ee; font-size: 20px; font-weight: bold;"
+  "color: #22d3ee; font-size: 20px; font-weight: bold;",
 );
 console.log(
   "%cThank you for visiting. Feel free to explore my projects!",
-  "color: #6366f1; font-size: 14px;"
+  "color: #6366f1; font-size: 14px;",
 );
