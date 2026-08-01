@@ -3,150 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hafidh Mwita | Full-Stack Developer</title>
+    <title>Hafidh Mwita — Full-Stack Developer</title>
 
-    <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Navigation -->
+  <body class="is-loading">
+    <!-- Editor top bar -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
-          <i class="fas fa-code"></i>
-          <span>Hafidh</span>
+          <span class="logo-dot"></span>
+          <span class="logo-text">hafidh<span class="logo-ext">.dev</span></span>
         </div>
+
         <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about" class="nav-link" data-tip="About"><i class="fa-solid fa-user"></i><span>about</span></a></li>
+          <li><a href="#skills" class="nav-link" data-tip="Skills"><i class="fa-solid fa-layer-group"></i><span>skills</span></a></li>
+          <li><a href="#projects" class="nav-link" data-tip="Projects"><i class="fa-solid fa-diagram-project"></i><span>projects</span></a></li>
+          <li><a href="#contact" class="nav-link" data-tip="Contact"><i class="fa-solid fa-paper-plane"></i><span>contact</span></a></li>
         </ul>
-        <div class="theme-toggle">
-          <button id="themeToggle" class="toggle-btn" title="Toggle Theme">
-            <i class="fas fa-moon"></i>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="toggle-btn" title="Toggle theme" aria-label="Toggle light and dark theme">
+            <i class="fa-solid fa-moon"></i>
           </button>
-        </div>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </div>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero" id="hero">
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+
       <div class="hero-container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1 class="hero-title">
-              Hi, I'm <span class="text-accent">Hafidh Mwita Haji</span>
-            </h1>
-            <p class="hero-subtitle">Full-Stack Developer & IT Student</p>
+            <div class="file-window hero-window">
+              <div class="file-header">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <span class="filename"><i class="fa-brands fa-js"></i> developer.js</span>
+                <span class="file-lang">JS</span>
+              </div>
+              <div class="code-body">
+                <pre class="code-block"><span class="ln">1</span><span class="tok-kw">const</span> <span class="tok-var">developer</span> <span class="tok-punc">=</span> <span class="tok-punc">{</span>
+<span class="ln">2</span>  <span class="tok-prop">name</span><span class="tok-punc">:</span> <span class="tok-str">"Hafidh Mwita Haji"</span><span class="tok-punc">,</span>
+<span class="ln">3</span>  <span class="tok-prop">role</span><span class="tok-punc">:</span> <span class="tok-str">"Full-Stack Developer"</span><span class="tok-punc">,</span>
+<span class="ln">4</span>  <span class="tok-prop">stack</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">"Python"</span><span class="tok-punc">,</span> <span class="tok-str">"Node.js"</span><span class="tok-punc">,</span> <span class="tok-str">"React"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+<span class="ln">5</span>  <span class="tok-prop">status</span><span class="tok-punc">:</span> <span class="tok-str">"open to work"</span><span class="tok-punc">,</span>
+<span class="ln">6</span><span class="tok-punc">}</span><span class="hero-cursor">&nbsp;</span></pre>
+              </div>
+            </div>
+
             <p class="hero-description">
-              I specialize in building
-              <strong>scalable backend systems</strong>, modern
-              <strong>web applications</strong>, and robust
-              <strong>APIs</strong> using Python, Node.js, and React. Passionate
-              about solving real-world problems through elegant code.
+              I build <strong>scalable backend systems</strong>, modern
+              <strong>web applications</strong>, and robust <strong>APIs</strong>
+              with Python, Node.js, and React — currently studying IT with
+              Management at SUZA.
             </p>
+
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary">
-                <i class="fas fa-briefcase"></i> View My Work
+                <i class="fas fa-briefcase"></i> View my work
               </a>
               <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-paper-plane"></i> Get In Touch
+                <i class="fas fa-paper-plane"></i> Get in touch
               </a>
             </div>
+
             <div class="social-links">
-              <a
-                href="https://github.com/hafidh-099"
-                target="_blank"
-                class="social-icon"
-                title="GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="mailto:hafidhmwita30@gmail.com"
-                class="social-icon"
-                title="Email"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="#" class="social-icon" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#" class="social-icon" title="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
+              <a href="https://github.com/hafidh-099" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="mailto:hafidhmwita30@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
+
           <div class="hero-image">
             <div class="image-wrapper">
               <img src="profile.jpg" alt="Hafidh Mwita" class="profile-image" />
+              <span class="orbit-chip chip-1" title="Python"><i class="fab fa-python"></i></span>
+              <span class="orbit-chip chip-2" title="React"><i class="fab fa-react"></i></span>
+              <span class="orbit-chip chip-3" title="Node.js"><i class="fab fa-node-js"></i></span>
+              <span class="status-pill"><span class="pulse-dot"></span> Available</span>
             </div>
           </div>
         </div>
       </div>
+
       <div class="scroll-indicator">
-        <span>Scroll to explore</span>
+        <span>scroll</span>
         <i class="fas fa-chevron-down"></i>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-user-circle"></i> About Me
-        </h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I'm an intermediate Full-Stack Developer and IT with Management
-              student at the
-              <strong>State University of Zanzibar (SUZA)</strong>. I'm
-              passionate about creating efficient, scalable solutions that make
-              an impact.
-            </p>
-            <p>
-              With expertise in
-              <strong>Python, JavaScript, and modern web frameworks</strong>,
-              I've developed multiple full-stack applications from concept to
-              deployment. I love working on challenging projects that push the
-              boundaries of what's possible.
-            </p>
-            <p>
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or learning about emerging
-              trends in software development.
-            </p>
-            <div class="about-stats">
-              <div class="stat">
-                <h3>10+</h3>
-                <p>Projects Built</p>
-              </div>
-              <div class="stat">
-                <h3>5+</h3>
-                <p>Years Experience</p>
-              </div>
-              <div class="stat">
-                <h3>100%</h3>
-                <p>Dedication</p>
+        <div class="file-window">
+          <div class="file-header">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="filename"><i class="fa-solid fa-file-lines"></i> about.md</span>
+            <span class="file-lang">MD</span>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                <span class="comment">// intermediate full-stack developer, based in Zanzibar</span><br />
+                I'm an intermediate Full-Stack Developer and IT with Management
+                student at the <strong>State University of Zanzibar (SUZA)</strong>.
+                I'm passionate about creating efficient, scalable solutions
+                that make an impact.
+              </p>
+              <p>
+                <span class="comment">// core toolkit</span><br />
+                With expertise in <strong>Python, JavaScript, and modern web
+                frameworks</strong>, I've built multiple full-stack applications
+                from concept to deployment — and I enjoy the kind of problems
+                that push what's possible.
+              </p>
+              <p>
+                <span class="comment">// off the clock</span><br />
+                When I'm not coding, I'm exploring new technologies,
+                contributing to open-source, or reading up on where software
+                is headed next.
+              </p>
+
+              <div class="about-stats">
+                <div class="stat">
+                  <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                  <h3 data-target="10">0</h3>
+                  <p>Projects built</p>
+                </div>
+                <div class="stat">
+                  <div class="stat-icon"><i class="fa-solid fa-code-branch"></i></div>
+                  <h3 data-target="5">0</h3>
+                  <p>Years experience</p>
+                </div>
+                <div class="stat">
+                  <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+                  <h3 data-target="100">0</h3>
+                  <p>Dedication</p>
+                </div>
               </div>
             </div>
           </div>
@@ -154,246 +161,187 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- SKILLS -->
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-code"></i> Technical Skills
-        </h2>
-        <div class="skills-grid">
-          <!-- Backend -->
-          <div class="skill-category">
-            <h3><i class="fas fa-server"></i> Backend</h3>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-python"></i></div>
-              <p>Python</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-js"></i></div>
-              <p>Node.js</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-cube"></i></div>
-              <p>Django</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-cube"></i></div>
-              <p>Flask</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-cube"></i></div>
-              <p>Express.js</p>
-            </div>
+        <div class="file-window">
+          <div class="file-header">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="filename"><i class="fa-solid fa-brackets-curly"></i> skills.json</span>
+            <span class="file-lang">JSON</span>
           </div>
 
-          <!-- Frontend -->
-          <div class="skill-category">
-            <h3><i class="fas fa-palette"></i> Frontend</h3>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-react"></i></div>
-              <p>React</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-js"></i></div>
-              <p>JavaScript</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-html5"></i></div>
-              <p>HTML/CSS</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-cube"></i></div>
-              <p>Responsive Design</p>
-            </div>
-          </div>
+          <div class="skills-body">
+            <div class="skills-grid">
+              <div class="skill-category">
+                <h3><i class="fas fa-server"></i> backend<span class="brace">[]</span></h3>
+                <div class="skill-tiles">
+                  <div class="skill-card" data-tip="Python"><div class="skill-icon"><i class="fab fa-python"></i></div><p>Python</p></div>
+                  <div class="skill-card" data-tip="Node.js"><div class="skill-icon"><i class="fab fa-node-js"></i></div><p>Node.js</p></div>
+                  <div class="skill-card" data-tip="Django"><div class="skill-icon"><i class="fas fa-fire-flame-curved"></i></div><p>Django</p></div>
+                  <div class="skill-card" data-tip="Flask"><div class="skill-icon"><i class="fas fa-flask"></i></div><p>Flask</p></div>
+                  <div class="skill-card" data-tip="Express.js"><div class="skill-icon"><i class="fas fa-bolt"></i></div><p>Express</p></div>
+                </div>
+              </div>
 
-          <!-- Databases & Tools -->
-          <div class="skill-category">
-            <h3><i class="fas fa-tools"></i> Tools & Databases</h3>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-database"></i></div>
-              <p>PostgreSQL</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-database"></i></div>
-              <p>MySQL</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-leaf"></i></div>
-              <p>MongoDB</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-docker"></i></div>
-              <p>Docker</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-              <p>Git/GitHub</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon"><i class="fas fa-lock"></i></div>
-              <p>JWT Auth</p>
+              <div class="skill-category">
+                <h3><i class="fas fa-palette"></i> frontend<span class="brace">[]</span></h3>
+                <div class="skill-tiles">
+                  <div class="skill-card" data-tip="React"><div class="skill-icon"><i class="fab fa-react"></i></div><p>React</p></div>
+                  <div class="skill-card" data-tip="JavaScript"><div class="skill-icon"><i class="fab fa-js"></i></div><p>JavaScript</p></div>
+                  <div class="skill-card" data-tip="HTML/CSS"><div class="skill-icon"><i class="fab fa-html5"></i></div><p>HTML/CSS</p></div>
+                  <div class="skill-card" data-tip="Responsive Design"><div class="skill-icon"><i class="fas fa-mobile-screen"></i></div><p>Responsive</p></div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> tools<span class="brace">[]</span></h3>
+                <div class="skill-tiles">
+                  <div class="skill-card" data-tip="PostgreSQL"><div class="skill-icon"><i class="fas fa-database"></i></div><p>PostgreSQL</p></div>
+                  <div class="skill-card" data-tip="MySQL"><div class="skill-icon"><i class="fas fa-database"></i></div><p>MySQL</p></div>
+                  <div class="skill-card" data-tip="MongoDB"><div class="skill-icon"><i class="fas fa-leaf"></i></div><p>MongoDB</p></div>
+                  <div class="skill-card" data-tip="Docker"><div class="skill-icon"><i class="fab fa-docker"></i></div><p>Docker</p></div>
+                  <div class="skill-card" data-tip="Git/GitHub"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><p>Git</p></div>
+                  <div class="skill-card" data-tip="JWT Auth"><div class="skill-icon"><i class="fas fa-key"></i></div><p>JWT Auth</p></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS -->
     <section class="projects" id="projects">
       <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-laptop-code"></i> Featured Projects
-        </h2>
+        <h2 class="section-title"><i class="fas fa-folder-open"></i> ~/projects</h2>
+
         <div class="projects-grid">
-          <!-- Project 1 -->
           <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-robot"></i>
-            </div>
+            <div class="project-header"><i class="fas fa-robot"></i></div>
             <h3>AI SUZA Chatbot</h3>
-            <p>
-              Health AI assistant that provides intelligent responses to
-              health-related queries using advanced AI models.
-            </p>
+            <p>Health AI assistant that provides intelligent responses to health-related queries using advanced AI models.</p>
             <div class="project-tech">
               <span class="tech-tag">Flask</span>
               <span class="tech-tag">React</span>
               <span class="tech-tag">AI API</span>
             </div>
-            <a
-              href="https://github.com/hafidh-099/AI-SUZA-Chartbot.git"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i> View Source
+            <a href="https://github.com/hafidh-099/AI-SUZA-Chartbot.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View source
             </a>
           </div>
 
-          <!-- Project 2 -->
           <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
+            <div class="project-header"><i class="fas fa-shopping-cart"></i></div>
             <h3>My Store</h3>
-            <p>
-              Digital e-commerce platform with server-side rendering, product
-              management, and secure payment integration.
-            </p>
+            <p>Digital e-commerce platform with server-side rendering, product management, and secure payment integration.</p>
             <div class="project-tech">
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">Express</span>
               <span class="tech-tag">EJS</span>
             </div>
-            <a
-              href="https://github.com/hafidh-099/My-Store.git"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i> View Source
+            <a href="https://github.com/hafidh-099/My-Store.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View source
             </a>
           </div>
 
-          <!-- Project 3 -->
           <div class="project-card">
-            <div class="project-header">
-              <i class="fas fa-book"></i>
-            </div>
+            <div class="project-header"><i class="fas fa-book"></i></div>
             <h3>Learning Management System</h3>
-            <p>
-              Complete online education platform for course management, student
-              enrollment, and secure authentication with role-based access.
-            </p>
+            <p>Complete online education platform for course management, student enrollment, and secure role-based authentication.</p>
             <div class="project-tech">
               <span class="tech-tag">Django</span>
               <span class="tech-tag">React</span>
               <span class="tech-tag">MySQL</span>
             </div>
-            <a
-              href="https://github.com/hafidh-099/learning-management-system-LMS-.git"
-              target="_blank"
-              class="project-link"
-            >
-              <i class="fab fa-github"></i> View Source
+            <a href="https://github.com/hafidh-099/learning-management-system-LMS-.git" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View source
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-envelope"></i> Get In Touch
-        </h2>
-        <div class="contact-content">
-          <p class="contact-intro">
-            I'm always interested in hearing about new projects and
-            opportunities. Feel free to reach out!
-          </p>
-          <div class="contact-card">
-            <div class="contact-info">
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <div>
-                  <p class="contact-label">Email</p>
-                  <a href="mailto:hafidhmwita30@gmail.com"
-                    >hafidhmwita30@gmail.com</a
-                  >
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <div>
-                  <p class="contact-label">Phone</p>
-                  <a href="tel:+255623101586">+255 623 101 586</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-location-dot"></i>
-                <div>
-                  <p class="contact-label">Location</p>
-                  <p>Zanzibar, Tanzania</p>
-                </div>
-              </div>
-            </div>
-            <div class="contact-social">
-              <p class="social-label">Follow Me</p>
-              <div class="social-icons">
-                <a
-                  href="https://github.com/hafidh-099"
-                  target="_blank"
-                  class="social-icon-large"
-                  title="GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="mailto:hafidhmwita30@gmail.com"
-                  class="social-icon-large"
-                  title="Email"
-                >
+        <div class="file-window">
+          <div class="file-header">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="filename"><i class="fa-solid fa-terminal"></i> contact.send()</span>
+            <span class="file-lang">FORM</span>
+          </div>
+
+          <div class="contact-body">
+            <p class="contact-intro">
+              I'm always interested in new projects and opportunities — drop a
+              message and it'll land straight in my inbox.
+            </p>
+
+            <div class="contact-grid">
+              <!-- Quick contact tiles -->
+              <div class="contact-info">
+                <a href="mailto:hafidhmwita30@gmail.com" class="contact-item" data-tip="Email">
                   <i class="fas fa-envelope"></i>
+                  <div><p class="contact-label">Email</p><span>hafidhmwita30@gmail.com</span></div>
                 </a>
-                <a href="#" class="social-icon-large" title="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
+                <a href="tel:+255623101586" class="contact-item" data-tip="Phone">
+                  <i class="fas fa-phone"></i>
+                  <div><p class="contact-label">Phone</p><span>+255 623 101 586</span></div>
                 </a>
-                <a href="#" class="social-icon-large" title="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
+                <div class="contact-item" data-tip="Location">
+                  <i class="fas fa-location-dot"></i>
+                  <div><p class="contact-label">Location</p><span>Zanzibar, Tanzania</span></div>
+                </div>
+
+                <div class="contact-social">
+                  <p class="social-label">Follow</p>
+                  <div class="social-icons">
+                    <a href="https://github.com/hafidh-099" target="_blank" class="social-icon-large" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:hafidhmwita30@gmail.com" class="social-icon-large" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon-large" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon-large" title="Twitter"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
               </div>
+
+              <!-- Message form -->
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                  <label for="fromName"><i class="fa-solid fa-user"></i> name</label>
+                  <input type="text" id="fromName" name="fromName" placeholder="Jane Doe" required />
+                  <span class="form-error">Tell me your name</span>
+                </div>
+                <div class="form-row">
+                  <label for="fromEmail"><i class="fa-solid fa-at"></i> email</label>
+                  <input type="email" id="fromEmail" name="fromEmail" placeholder="jane@email.com" required />
+                  <span class="form-error">Enter a valid email</span>
+                </div>
+                <div class="form-row">
+                  <label for="messageBody"><i class="fa-solid fa-message"></i> message</label>
+                  <textarea id="messageBody" name="messageBody" rows="5" placeholder="// what's on your mind?" required></textarea>
+                  <span class="form-error">Write a short message</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-send">
+                  <i class="fas fa-paper-plane"></i>
+                  <span class="btn-send-label">Send message</span>
+                </button>
+
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
-        <p>
-          &copy; 2026 Hafidh Mwita. All rights reserved. | Built with
+        <p class="terminal-line">
+          <span class="prompt">hafidh@zanzibar</span><span class="prompt-sep">:~$</span>
+          echo "&copy; 2026 Hafidh Mwita — built with <i class="fas fa-heart"></i> and a lot of coffee"
         </p>
       </div>
     </footer>
