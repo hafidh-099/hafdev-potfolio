@@ -99,9 +99,8 @@ sections.forEach((section) => navObserver.observe(section));
 // SCROLL-TRIGGERED REVEAL ANIMATIONS
 // ============================================================================
 const revealTargets = document.querySelectorAll(
-  ".file-window, .project-card, .stat, .section-title, .skill-category",
+  ".file-window, .project-card, .stat, .section-title, .skill-category, .service-card, .timeline-item",
 );
-
 revealTargets.forEach((el) => el.classList.add("reveal"));
 
 const revealObserver = new IntersectionObserver(
